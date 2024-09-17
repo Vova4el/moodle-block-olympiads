@@ -15,15 +15,14 @@ class block_olympiads extends block_base {
     }
 
     public function get_content() {
-        global $OUTPUT;
+        global $cfg;
 
         if ($this->content !== null) {
             return $this->content;
         }
 
         $this->content = new stdClass();
-        $this->content->text = $this->get_olympiads_list();
-        $this->content->footer = '';
+        $this->content->text = '<a href="'.$CFG->wwwroot.'/blocks/olympiads/add_edit.php">'.get_string('addolympiad', 'block_olympiads').'</a>';
 
         return $this->content;
     }

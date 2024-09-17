@@ -15,10 +15,10 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-$string['pluginname'] = 'Olympiads';
-$string['pluginname:addinstance'] = 'Add a new Olympiads block';
-$string['pluginname:myaddinstance'] = 'Add a new Olympiads block to the My Moodle page';
-$string['olympiads:add'] = 'Add and manage Olympiads';
-$string['olympiads:edit'] = 'Edit Olympiads';
-$string['olympiads:delete'] = 'Delete Olympiads';
-$string['olympiads:view'] = 'View Olympiads';
+$string['editolympiad'] = 'Edit the Olympiad';
+$string['name'] = 'Title';
+$string['description'] = 'Description';
+$string['startdate'] = 'Start date';
+$string['enddate'] = 'End date';
+$string['defaulttitle'] = 'Default Title';
+$string['addolympiad'] = 'Add Olympiad';
