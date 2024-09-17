@@ -2,10 +2,14 @@
 // Файл: form/olympiad_form.php
 require_once("$CFG->libdir/formslib.php");
 
+
 class olympiad_form extends moodleform {
     public function definition() {
         $mform = $this->_form;
 
+        // Добавляем скрытое поле для идентификатора
+        $mform->addElement('hidden', 'id');
+        $mform->setType('id', PARAM_INT);
         // Поле для названия олимпиады
         $mform->addElement('text', 'name', get_string('name', 'block_olympiads'));
         $mform->setType('name', PARAM_TEXT);

@@ -17,12 +17,12 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin = new stdClass();
-$plugin->version = 2024091700; // YYYYMMDDXX - Plugin version.
+$plugin->version = 2024091703; // YYYYMMDDXX - Plugin version.
 $plugin->requires = 2022041900; // YYYYMMDDXX - Minimum Moodle version required.
 $plugin->supported = [2022041900, 2024090000]; // Supported Moodle versions.
 $plugin->component = 'block_olympiads'; // Full name of the plugin (used for diagnostics).
 $plugin->maturity = MATURITY_ALPHA; // Plugin maturity level (ALPHA, BETA, RC, STABLE).
-$plugin->release = '0.1.0'; // Human-readable release number.
+$plugin->release = '0.4.0'; // Human-readable release number.
 
 $plugin->dependencies = [
     'mod_forum' => 2022041900, // Example dependency.
