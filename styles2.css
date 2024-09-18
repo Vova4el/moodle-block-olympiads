@@ -1,0 +1,41 @@
+
+.olympiad-card {
+    display: flex;
+    flex: 1 1 90%;
+    max-width: 90%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.olympiad-image {
+    width: 50%;
+    overflow: hidden;
+}
+
+.olympiad-image img {
+    max-width: 100%;
+}
+
+.olympiad-details {
+    text-align: left;
+}
+
+.olympiad-details h3 {
+    margin: 0;
+}
+
+.olympiad-details p {
+    margin: 5px 0;
+}
+
+.title {
+    color: #FF0000;
+}
+.btn-primary {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

@@ -57,7 +57,7 @@ if ($olympiadid) {
     if ($record) {
         $mform->set_data($record);
     } else {
-        print_error('invalidid', 'block_olympiads_olympiads');
+        redirect(new moodle_url('/'), get_string('invalidid', 'block_olympiads'), 3);
     }
 }
 
