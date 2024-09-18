@@ -30,7 +30,26 @@ if ($olympiadid) {
             'startdate' => $formatted_startdate,
             'enddate' => $formatted_enddate,
             'image' => $OUTPUT->image_url('1', 'block_olympiads'), // путь к изображению
+            'signupurl' => '/blocks/olympiads/signup.php?id=' . $olympiadid . '&action=signup'
         ];
+        // Проверяем, была ли отправлена форма для записи
+        if (optional_param('action', '', PARAM_TEXT)) {
+            // Добавляем запись в таблицу с регистрацией
+            $registration = new stdClass();
+            $registration->userid = $USER->id; // ID текущего пользователя
+            $registration->olympiadid = $olympiadid;
+            $action = optional_param('action', '', PARAM_TEXT);
+            // Проверяем, существует ли уже запись о регистрации
+            if (!$DB->record_exists('block_olympiads_registrations', ['userid' => $USER->id, 'olympiadid' => $olympiadid])) {
+                $DB->insert_record('block_olympiads_registrations', $registration);
+                $message = get_string('registration_success', 'block_olympiads');
+            } else {
+                $message = get_string('already_registered', 'block_olympiads');
+            }
+
+            // Перенаправляем с сообщением
+            redirect(new moodle_url('/blocks/olympiads/signup.php', ['id' => $olympiadid]), $message, 3);
+        }
     } else {
         // Если запись с таким ID не найдена, перенаправляем на главную страницу
         redirect(new moodle_url('/'), get_string('invalidid', 'block_olympiads'), 3);
@@ -40,10 +59,6 @@ if ($olympiadid) {
     redirect(new moodle_url('/'), get_string('missingid', 'block_olympiads'), 3);
 }
 
-// Передаем данные в шаблон
-$template_data = [
-    'registration_ol' => $regist_data
-];
 
 // Отображаем шаблон
 echo $OUTPUT->header();

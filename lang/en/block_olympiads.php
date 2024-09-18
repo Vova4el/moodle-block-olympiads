@@ -33,3 +33,6 @@ $string['to_ol'] = 'to';
 $string['signup'] = 'Sign up';
 $string['missingid'] = 'Missing id';
 $string['invalidid'] = 'Invalid id';
+$string['registration_success'] = 'You have successfully registered for the Olympiad!';
+$string['already_registered'] = 'You have already registered for this Olympiad';
+$string['pluginname'] = 'olympiads';

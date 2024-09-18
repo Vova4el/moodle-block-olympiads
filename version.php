@@ -17,7 +17,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin = new stdClass();
-$plugin->version = 2024091703; // YYYYMMDDXX - Plugin version.
+$plugin->version = 2024091900; // YYYYMMDDXX - Plugin version.
 $plugin->requires = 2022041900; // YYYYMMDDXX - Minimum Moodle version required.
 $plugin->supported = [2022041900, 2024090000]; // Supported Moodle versions.
 $plugin->component = 'block_olympiads'; // Full name of the plugin (used for diagnostics).

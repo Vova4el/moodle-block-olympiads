@@ -32,3 +32,6 @@ $string['to_ol'] = 'по';
 $string['signup'] = 'Записаться';
 $string['missingid'] = 'Отсутствует id';
 $string['invalidid'] = 'Неправильный id';
+$string['registration_success'] = 'Вы успешно зарегистрировались на олимпиаду!';
+$string['already_registered'] = 'Вы уже зарегистрированы на эту олимпиаду.';
+$string['pluginname'] = 'olympiads';
