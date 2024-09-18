@@ -1,0 +1,35 @@
+.olympiads-list {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет блокам переноситься на следующую строку */
+    gap: 20px; /* Расстояние между блоками */
+    justify-content: flex-start; /* Выровнять по левому краю */
+}
+
+.olympiad-card {
+    flex: 1 1 200px;
+    max-width: 200px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.olympiad-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.olympiad-image img {
+    width: 100%;
+    height: auto;
+}
+.olympiad-details {
+    text-align: center;
+}
+
+.olympiad-details h3 {
+    margin: 0;
+}
+
+.olympiad-details p {
+    margin: 5px 0;
+}

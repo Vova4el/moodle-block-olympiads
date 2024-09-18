@@ -14,15 +14,4 @@
 // Вы должны были получить копию GNU General Public License
 // вместе с Moodle. Если нет, смотрите <http://www.gnu.org/licenses/>.
 
-$string['editolympiad'] = 'Редактировать олимпиаду';
-$string['name'] = 'Название';
-$string['description'] = 'Описание';
-$string['startdate'] = 'Дата начала';
-$string['enddate'] = 'Дата окончания';
-$string['defaulttitle'] = 'Заголовок по умолчанию';
-$string['addolympiad'] = 'Добавить олимпиаду';
-$string['view_olympiads'] = 'Список олимпиад';
-$string['olympiadsaved'] = 'Олимпиада сохранена';
-$string['olympiadlist'] = 'Олимпиады';
-$string['actions'] = 'Инструменты';
-$string['confirmdelete'] = 'Вы уверены, что хотите удалить олимпиаду?';
+$string['name'] = 'Олимпиады';;

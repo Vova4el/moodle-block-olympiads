@@ -64,7 +64,6 @@ foreach ($olympiads as $olympiad) {
 
 // Отображаем таблицу
 echo $OUTPUT->header();
-echo html_writer::tag('h2', get_string('olympiadlist', 'block_olympiads'));
 echo html_writer::table($table);
 echo $OUTPUT->footer();
 
