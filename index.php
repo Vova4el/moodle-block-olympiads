@@ -20,6 +20,8 @@ global $DB;
 $id = optional_param('id', 0, PARAM_INT);
 
 if ($id) {
+    // Удаляем записи студентов, зарегистрированных на олимпиаду
+    $DB->delete_records('block_olympiads_registrations', array('olympiadid' => $id));
     $DB->delete_records('block_olympiads_olympiads', array('id' => $id));
     redirect(new moodle_url('/blocks/olympiads/index.php'), get_string('olympiaddeleted', 'block_olympiads'));
 }
@@ -51,12 +53,16 @@ foreach ($olympiads as $olympiad) {
         'title' => get_string('delete'),
         'onclick' => 'return confirm("'.get_string('confirmdelete', 'block_olympiads').'")'
     ]);
+    // URL для удаления с подтверждением
+    $view_students_url = new moodle_url('/blocks/olympiads/view_students.php', ['id' => $olympiad->id]);
+    $view_students_icon = $OUTPUT->pix_icon('t/viewdetails', get_string('view'));
+    $view_students_link = html_writer::link($view_students_url, $view_students_icon, ['title' => get_string('viewstudents')]);
     $row->cells = array(
         $olympiad->name,
         $olympiad->description,
         userdate($olympiad->startdate),
         userdate($olympiad->enddate),
-        $edit_link . ' ' . $delete_link
+        $edit_link . ' ' . $delete_link . ' ' . $view_students_link
     );
 
     $table->data[] = $row;

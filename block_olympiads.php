@@ -15,7 +15,6 @@ class block_olympiads extends block_base {
     }
 
     public function get_content() {
-        global $CFG;
 
         if ($this->content !== null) {
             return $this->content;
@@ -39,18 +38,24 @@ class block_olympiads extends block_base {
             get_string('addolympiad', 'block_olympiads')
         );
 
+        // Добавляем пустую строку с тегом <br>
+        $this->content->text .= html_writer::tag('br', ''); // Исправлено
+
+        // Ссылка для сотрудников на редактирование олимпиад
+        $this->content->text .= html_writer::link(
+            new moodle_url('/blocks/olympiads/index.php'),
+            get_string('olympiadlist', 'block_olympiads')
+        );
         return $this->content;
     }
-    private function get_olympiads_list() {
-        global $DB;
 
-        $olympiads = $DB->get_records('block_olympiads_olympiads');
-        $output = '';
 
-        foreach ($olympiads as $olympiad) {
-            $output .= html_writer::tag('div', $olympiad->name . ' - ' . $olympiad->startdate . ' to ' . $olympiad->enddate, ['class' => 'olympiad-item']);
-        }
-
-        return $output;
+    public function applicable_formats() {
+        return [
+            'my' => true,
+            'site-index' => true,
+            'course-view' => true,
+            'mod' => false,
+        ];
     }
 }
