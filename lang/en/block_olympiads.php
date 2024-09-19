@@ -42,3 +42,4 @@ $string['email'] = 'email';
 $string['olympiaddeleted'] = 'The Olympiad has been deleted';
 $string['view_students'] = 'Enrolled students';
 $string['olympiadsaved'] = 'Olympiad saved';
+$string['defaulttitle'] = 'Olympiad';

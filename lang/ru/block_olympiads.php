@@ -41,3 +41,4 @@ $string['email'] = 'Электронная почта';
 $string['olympiaddeleted'] = 'Олимпиада удалена';
 $string['view_students'] = 'Записанные студенты';
 $string['olympiadsaved'] = 'Олимпиада сохранена';
+$string['defaulttitle'] = 'Олимпиада';
